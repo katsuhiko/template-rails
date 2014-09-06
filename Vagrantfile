@@ -24,7 +24,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.add_recipe "locales"
     chef.add_recipe "vim"
     chef.add_recipe "mysql::server"
-    chef.add_recipe "mysql::client"
     chef.add_recipe "redisio"
     chef.add_recipe "redisio::enable"
     chef.add_recipe "nodebrew"
@@ -66,4 +65,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       }
     }
   end
+
+  # Interim correspondence of the problems
+  # that the process of mysql rises two
+  config.vm.provision "shell", inline: "service mysql restart"
 end
