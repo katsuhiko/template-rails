@@ -17,8 +17,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.customize ["modifyvm", :id, "--memory", "1024"]
   end
 
-  # config.librarian_chef.cheffile_dir = "chef"
-
   config.vm.provision "chef_solo" do |chef|
     chef.cookbooks_path = ["cookbooks", "site-cookbooks"]
 
@@ -41,7 +39,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       },
       mysql: {
         version: "5.5",
-        allow_remove_root: true,
+        allow_remote_root: true,
         server_root_password: ""
       },
       rbenv: {
