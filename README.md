@@ -1,28 +1,25 @@
-== README
+# VirtualBox for Ruby on Rails App Developmet
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+以下のサイトを参考に作成したアプリ開発のテンプレートです。
 
-Things you may want to cover:
+* https://gorails.com/guides/using-vagrant-for-rails-development
 
-* Ruby version
+## Requirements
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* [VirtualBox](https://www.virtualbox.org)
+* [Vagrant](http://vagrantup.com)
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+## How To Build The Virtual Machine
+
+Vagrant:
+
+    host $ vagrant plugin install vagrant-vbguest
+    host $ vagrant plugin install vagrant-librarian-chef
+    host $ vagrant plugin install vagrant-vbox-snapshot
+
+Building the virtual machine:
+
+    host $ git clone https://github.com/katsuhiko/template-rails.git
+    host $ cd template-rails
+    host $ vagrant up
