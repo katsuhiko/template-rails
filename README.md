@@ -27,3 +27,8 @@ Building the virtual machine:
 ## How To New Rails Project
 
 * https://github.com/RailsApps/rails-composer
+
+## How To New Rails Plugin
+
+* http://www.andrewhavens.com/posts/27/how-to-create-a-new-rails-engine-which-uses-rspec-and-factorygirl-for-testing/
+
