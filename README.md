@@ -23,3 +23,7 @@ Building the virtual machine:
     host $ git clone https://github.com/katsuhiko/template-rails.git
     host $ cd template-rails
     host $ vagrant up
+
+## How To New Rails Project
+
+* https://github.com/RailsApps/rails-composer
